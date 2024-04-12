@@ -35,7 +35,7 @@ function makeNewQuestions() {
 // Chooses a topic then calls two help functions
 function makeQuestions() {
 
-    for (let i = 1; i < 2; i++) {
+    for (let i = 1; i < 4; i++) {
         // Gets a number for a topic
         let a = Math.floor(Math.random() * 10) + 1;
 
