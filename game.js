@@ -8,6 +8,15 @@ var stateName = '';
 var lastState = '';
 var img = document.querySelector('.stateImg');
 
+// If the user clicks enter in the input area
+const textInput = document.getElementById('stateInputName');
+textInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        checkInput();
+    }
+});
+
 // Gets random number for a state
 function randomNum() {
     let a = Math.floor(Math.random() * 50);
