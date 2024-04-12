@@ -35,22 +35,22 @@ function makeNewQuestions() {
 // Chooses a topic then calls two help functions
 function makeQuestions() {
 
+    // numbers are like this because i is the num that shows up on the question
     for (let i = 1; i < 4; i++) {
         // Gets a number for a topic
-        let a = Math.floor(Math.random() * 10) + 1;
+        const keys = Object.keys(questions)
+        let a = Math.floor(Math.random() * keys.length);
 
         // Gets a topic and desciption
-        const keys = Object.keys(questions);
         const topic = keys[a];
         const questionDesc = questions[topic];
 
-        try {
+        // try {
             // Get data based of topic
             getData(i, questionDesc.num, questionDesc);
-        } catch (e) {
-            // This is just incase questionDesc.num is null
-            makeQuestions();
-        }
+        // } catch (e) {
+            
+        // }
     }
 
 }

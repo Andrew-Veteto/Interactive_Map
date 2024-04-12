@@ -56,65 +56,70 @@
     </nav>
 
     <!-- Main Body -->
-    <h1 style="text-align: center;">Enter in the name of the state</h1>
+    <div class="container">
+        <h1 style="text-align: center;">Enter in the name of the state</h1>
 
-    <!-- Image of State Flag -->
-    <div class="row" style="justify-content: center; padding-top: 50px;">
-        <div class="col-sm-10 col-md-8 col-lg-5 col-xl-3">
-            <div class="canvas stateImg"></div>
-        </div>
-    </div>
-
-    <!-- Input field -->
-    <form>
-        <div class="row" style="justify-content: center;">
-            <div class="col-sm-10 col-md-8 col-lg-5 col-xl-3">
-                <div class="form-group">
-                    <input type="text" class="form-control" id="stateInputName" placeholder="State Name">
-                </div>
+        <!-- Image of State Flag -->
+        <div class="row" style="justify-content: center; padding-top: 50px;">
+            <div class="col-sm-10 col-md-8 col-lg-5 col-xl-5">
+                <div class="canvas stateImg"></div>
             </div>
         </div>
-    </form>
 
-    <br>
-
-    <!-- Button to check input -->
-    <div class="row justify-content-center">
-        <div class="col-1">
-            <button type="button" class="btn btn-secondary btn-lg" onclick="checkInput()">Check</button>
-        </div>
-    </div>
-
-    <br>
-
-    <!-- Button to check input -->
-    <h1 style="text-align: center;">Set difficulty:</h1>
-    <br>
-    <div class="row" style="justify-content: center;">
-        <div class="col-sm-12 col-md-12 col-lg-1 col-xl-1">
-            <button type="button" class="btn btn-secondary btn-lg" onclick="setDifficulty(0)">Easy</button>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-1 col-xl-1">
-            <button type="button" class="btn btn-secondary btn-lg" onclick="setDifficulty(1)">Medium</button>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-1 col-xl-1">
-            <button type="button" class="btn btn-secondary btn-lg" onclick="setDifficulty(2)">Hard</button>
-        </div>
-    </div>
-
-    <!-- Model -->
-    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Result</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- Input field -->
+        <form>
+            <div class="row" style="justify-content: center;">
+                <div class="col-sm-10 col-md-8 col-lg-5 col-xl-5">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="stateInputName" placeholder="State Name">
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <p id="modalMessage"></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </form>
+
+        <br>
+
+        <!-- Button to check input -->
+        <div class="row justify-content-center">
+            <div class="col-1">
+                <button type="button" class="btn btn-secondary btn-lg" onclick="checkInput()">Check</button>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Button to check input -->
+        <h1 style="text-align: center;">Set difficulty:</h1>
+        <br>
+
+
+        <div class="row" style="justify-content: center;">
+            <div class="col-sm-4 col-md-4 col-lg-2 col-xl-2 d-flex justify-content-center">
+                <button type="button" class="btn btn-secondary btn-lg" onclick="setDifficulty(0)">Easy</button>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-2 col-xl-2 d-flex justify-content-center">
+                <button type="button" class="btn btn-secondary btn-lg" onclick="setDifficulty(1)">Medium</button>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-2 col-xl-2 d-flex justify-content-center">
+                <button type="button" class="btn btn-secondary btn-lg" onclick="setDifficulty(2)">Hard</button>
+            </div>
+        </div>
+
+
+        <!-- Model -->
+        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Result</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="modalMessage"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>

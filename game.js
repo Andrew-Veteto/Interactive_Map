@@ -39,11 +39,14 @@ function checkInput(){
     let input = document.getElementById('stateInputName').value;
     document.getElementById('stateInputName').value = '';
     
+    // Removing space on the sides of the sting because autocomplete on tablets leaves spaces
+    input = input.trim();
+
     if (input.toLowerCase() === stateName.toLowerCase()) {
         displayModal('Correct');
         playGame();
     } else {
-        displayModal('Incorrect. The state was: ' + stateName);
+        displayModal('Incorrect. The state was: ' + stateName + ". You entered: " + input);
         playGame();
     }
 
